@@ -1,5 +1,5 @@
 .container-full{
-    height: 100vh;
+    min-height: 100vh;
 }
 .footer{
     position: relative;
@@ -30,7 +30,7 @@
 }
 
 
-/* dark */
+/* retro */
 .ansalo.retro{
     background-color: #FBFFE3 !important;
 }
