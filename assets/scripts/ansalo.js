@@ -4,7 +4,77 @@ let numbersString = '';
 
 const lettersInput = document.getElementById('lettersInput');
 const numbersInput = document.getElementById('numbersInput');
+const retroTheme = document.getElementById('retroTheme');
+const darkTheme = document.getElementById('darkTheme');
+const header = document.getElementById('header');
+const ansalo = document.getElementById('ansalo');
+const footer = document.getElementById('footer');
+
 const keys = document.getElementsByClassName('key');
+const labels = document.getElementsByClassName('label');
+const inputs = document.getElementsByClassName('input');
+
+
+darkTheme.addEventListener('change', ()=>{
+    if(darkTheme.checked){
+        if(retroTheme.checked){
+            retroTheme.checked = false;
+            removeTheme('retro');
+        }
+        applyTheme('dark');
+    }
+    else
+        removeTheme('dark');
+});
+
+retroTheme.addEventListener('change', ()=>{
+    if(retroTheme.checked){
+        if(darkTheme.checked){
+            darkTheme.checked = false;
+            removeTheme('dark');
+        }
+        applyTheme('retro');
+    }
+    else
+        removeTheme('retro');
+});
+
+
+const applyTheme = (theme)=>{
+    ansalo.classList.add(theme);
+        header.classList.add(theme);
+        footer.classList.add(theme);
+
+        for(let i = 0; i < labels.length; i++){
+            labels[i].classList.add(theme);
+        }
+        
+        for(let i = 0; i < inputs.length; i++){
+            inputs[i].classList.add(theme);
+        }
+
+        for(let i = 0; i < keys.length; i++){
+            keys[i].classList.add(theme);
+        }
+}
+
+const removeTheme = (theme)=>{
+    ansalo.classList.remove(theme);
+        header.classList.remove(theme);
+        footer.classList.remove(theme);
+
+        for(let i = 0; i < labels.length; i++){
+            labels[i].classList.remove(theme);
+        }
+        
+        for(let i = 0; i < inputs.length; i++){
+            inputs[i].classList.remove(theme);
+        }
+
+        for(let i = 0; i < keys.length; i++){
+            keys[i].classList.remove(theme);
+        }
+}
 
 for (let i = 0; i < keys.length; i++) {
     const key = keys[i];

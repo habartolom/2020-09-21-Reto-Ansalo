@@ -11,62 +11,58 @@
 </head>
 
 <body>
-    <div class="heightCustom container-full d-flex flex-column align-items-center ">
+    <div class="container-full d-flex flex-column align-items-center ">
         <main class="d-flex justify-content-center w-100">
-            <div class="ansalo border col-12 col-sm-8 col-md-6 col-lg-4 px-3 py-2">
-                <h1 class="text-center text-primary mt-3 p-3">RETO ÁNSALO</h1>
+            <div class="ansalo border col-12 col-sm-8 col-md-6 col-lg-4 px-3 py-2 bg-light" id="ansalo">
+                <h1 class="header text-center text-dark mt-3 p-3" id="header">RETO ÁNSALO</h1>
                 <div class="inputs px-3">
 
                     <div class="row justify-content-center py-2">
-                        <label class="col-4" for="">Letras</label>
-                        <input class="col-5" type="text" id="lettersInput" disabled>
+                        <label class="label col-4" for="">Letras</label>
+                        <input class="input col-5" type="text" id="lettersInput" disabled>
                     </div>
                     <div class="row justify-content-center py-2">
-                        <label class="col-4" for="">Números</label>
-                        <input class="col-5" type="text" id="numbersInput" disabled>
+                        <label class="label col-4" for="">Números</label>
+                        <input class="input col-5" type="text" id="numbersInput" disabled>
                     </div>
                 </div>
                 <div class="themes mt-2 ">
                     <div class="row justify-content-center align-items-center">
-                        <label class="col-8 col-lg-6" for="theme">ACTIVAR TEMA RETRO</label>
-                        <!-- Rounded switch -->
-                        <label class="switch">
-                            <input type="checkbox">
-                            <span class="slider round"></span>
-                        </label>
+                        <label class="label col-7 col-lg-6" for="theme">ACTIVAR TEMA RETRO</label>
+                        <input type="checkbox" name="theme" id="retroTheme">                        
                     </div>
                     <div class="row justify-content-center align-items-center">
-                        <label class="col-8 col-lg-6" for="theme">TEMA OSCURO</label>
-                        <input type="radio" name="theme" id="">
+                        <label class="label col-7 col-lg-6" for="theme">TEMA OSCURO</label>
+                        <input type="checkbox" name="theme" id="darkTheme">                        
                     </div>
                 </div>
                 <div class="keypad d-flex flex-column align-items-center justify-content-center py-3">
                     <div class="row justify-content-center">
-                        <button class="key btn-primary rounded-circle p-3 m-2" id="a-1">A-1</button>
-                        <button class="key btn-primary rounded-circle p-3 m-2" id="b-2">B-2</button>
-                        <button class="key btn-primary rounded-circle p-3 m-2" id="c-3">C-3</button>
+                        <button class="key btn-secondary border rounded-circle p-3 m-2" id="a-1">A-1</button>
+                        <button class="key btn-secondary border rounded-circle p-3 m-2" id="b-2">B-2</button>
+                        <button class="key btn-secondary border rounded-circle p-3 m-2" id="c-3">C-3</button>
                     </div>
                     <div class="row justify-content-center">
-                        <button class="key btn-primary rounded-circle p-3 m-2" id="d-4">D-4</button>
-                        <button class="key btn-primary rounded-circle p-3 m-2" id="e-5">E-5</button>
-                        <button class="key btn-primary rounded-circle p-3 m-2" id="f-6">F-6</button>
+                        <button class="key btn-secondary border rounded-circle p-3 m-2" id="d-4">D-4</button>
+                        <button class="key btn-secondary border rounded-circle p-3 m-2" id="e-5">E-5</button>
+                        <button class="key btn-secondary border rounded-circle p-3 m-2" id="f-6">F-6</button>
                     </div>
                     <div class="row justify-content-center">
-                        <button class="key btn-primary rounded-circle p-3 m-2" id="g-7">G-7</button>
-                        <button class="key btn-primary rounded-circle p-3 m-2" id="h-8">H-8</button>
-                        <button class="key btn-primary rounded-circle p-3 m-2" id="i-9">I-9</button>
+                        <button class="key btn-secondary border rounded-circle p-3 m-2" id="g-7">G-7</button>
+                        <button class="key btn-secondary border rounded-circle p-3 m-2" id="h-8">H-8</button>
+                        <button class="key btn-secondary border rounded-circle p-3 m-2" id="i-9">I-9</button>
                     </div>
                     <div class="row justify-content-center">
-                        <button class="key btn-primary rounded-circle p-3 m-2" id=""></button>
-                        <button class="key btn-primary rounded-circle p-3 m-2" id="j-0">J-0</button>
-                        <button class="key btn-primary rounded-circle py-3 m-2" id="reset">reset</button>
+                        <button class="key btn-secondary border rounded-circle p-3 m-2" id=""></button>
+                        <button class="key btn-secondary border rounded-circle p-3 m-2" id="j-0">J-0</button>
+                        <button class="key btn-secondary border rounded-circle py-3 m-2" id="reset">reset</button>
                     </div>
 
                 </div>
             </div>
         </main>
-        <footer class="footer d-flex justify-content-center align-items-center bg-primary text-light col-12 col-sm-8 col-md-6 col-lg-4 p-2">
-            <span>Developed by Harold Bartolo </span>
+        <footer class="footer d-flex justify-content-center align-items-center bg-dark text-light col-12 col-sm-8 col-md-6 col-lg-4 p-2" id="footer">
+            <span>Desarrollado por Harold Bartolo </span>
         </footer>
     </div>
 

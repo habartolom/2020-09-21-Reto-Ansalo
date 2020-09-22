@@ -10,3 +10,42 @@
 .key{
     width: 65px;
 }
+
+
+
+/* dark */
+.ansalo.dark{
+    background-color: #343A40 !important;
+}
+
+.header.dark, .label.dark{
+    color: white !important;
+}
+
+.input.dark{
+    color: #343A40 !important;
+}
+.footer.dark{
+    background-color: #5A6268 !important;
+}
+
+
+/* dark */
+.ansalo.retro{
+    background-color: #FBFFE3 !important;
+}
+
+.label.retro{
+    color: #333333 !important;
+}
+
+.header.retro{
+    color: #BC0E4C !important;
+}
+
+.input.retro{
+    color:  #333333 !important;
+}
+.footer.retro, .key.retro{
+    background-color: #333333 !important;
+}
