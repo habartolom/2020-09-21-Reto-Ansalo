@@ -14,10 +14,18 @@ const keys = document.getElementsByClassName('key');
 const labels = document.getElementsByClassName('label');
 const inputs = document.getElementsByClassName('input');
 
+let theme = localStorage.getItem('theme');
+if (theme != null) {
+    applyTheme(theme);
+    if(theme == 'dark')
+        darkTheme.checked = true;
+    else
+        retroTheme.checked = true;
+}
 
-darkTheme.addEventListener('change', ()=>{
-    if(darkTheme.checked){
-        if(retroTheme.checked){
+darkTheme.addEventListener('change', () => {
+    if (darkTheme.checked) {
+        if (retroTheme.checked) {
             retroTheme.checked = false;
             removeTheme('retro');
         }
@@ -27,9 +35,9 @@ darkTheme.addEventListener('change', ()=>{
         removeTheme('dark');
 });
 
-retroTheme.addEventListener('change', ()=>{
-    if(retroTheme.checked){
-        if(darkTheme.checked){
+retroTheme.addEventListener('change', () => {
+    if (retroTheme.checked) {
+        if (darkTheme.checked) {
             darkTheme.checked = false;
             removeTheme('dark');
         }
@@ -40,40 +48,44 @@ retroTheme.addEventListener('change', ()=>{
 });
 
 
-const applyTheme = (theme)=>{
+function applyTheme(theme){
     ansalo.classList.add(theme);
-        header.classList.add(theme);
-        footer.classList.add(theme);
+    header.classList.add(theme);
+    footer.classList.add(theme);
 
-        for(let i = 0; i < labels.length; i++){
-            labels[i].classList.add(theme);
-        }
-        
-        for(let i = 0; i < inputs.length; i++){
-            inputs[i].classList.add(theme);
-        }
+    for (let i = 0; i < labels.length; i++) {
+        labels[i].classList.add(theme);
+    }
 
-        for(let i = 0; i < keys.length; i++){
-            keys[i].classList.add(theme);
-        }
+    for (let i = 0; i < inputs.length; i++) {
+        inputs[i].classList.add(theme);
+    }
+
+    for (let i = 0; i < keys.length; i++) {
+        keys[i].classList.add(theme);
+    }
+
+    localStorage.setItem('theme', theme);
 }
 
-const removeTheme = (theme)=>{
+function removeTheme(theme){
     ansalo.classList.remove(theme);
-        header.classList.remove(theme);
-        footer.classList.remove(theme);
+    header.classList.remove(theme);
+    footer.classList.remove(theme);
 
-        for(let i = 0; i < labels.length; i++){
-            labels[i].classList.remove(theme);
-        }
-        
-        for(let i = 0; i < inputs.length; i++){
-            inputs[i].classList.remove(theme);
-        }
+    for (let i = 0; i < labels.length; i++) {
+        labels[i].classList.remove(theme);
+    }
 
-        for(let i = 0; i < keys.length; i++){
-            keys[i].classList.remove(theme);
-        }
+    for (let i = 0; i < inputs.length; i++) {
+        inputs[i].classList.remove(theme);
+    }
+
+    for (let i = 0; i < keys.length; i++) {
+        keys[i].classList.remove(theme);
+    }
+
+    localStorage.removeItem('theme');
 }
 
 for (let i = 0; i < keys.length; i++) {

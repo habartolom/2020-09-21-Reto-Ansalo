@@ -1,8 +1,8 @@
-.ansalo{
-    height: 100vh;
+.container-full{
+    min-height: 100vh;
 }
 .footer{
-    position: fixed;
+    position: relative;
     bottom: 0;
     height: 50px;
 }
