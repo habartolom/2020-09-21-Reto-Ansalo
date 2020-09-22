@@ -16,7 +16,7 @@
             <div class="ansalo border col-12 col-sm-8 col-md-6 col-lg-4 px-3 py-2 bg-light" id="ansalo">
                 <h1 class="header text-center text-dark mt-3 p-3" id="header">RETO ÁNSALO</h1>
                 <div class="inputs px-3">
-
+                    <!-- Default switch -->
                     <div class="row justify-content-center py-2">
                         <label class="label col-4" for="">Letras</label>
                         <input class="input col-5" type="text" id="lettersInput" disabled>
@@ -29,11 +29,20 @@
                 <div class="themes mt-2 ">
                     <div class="row justify-content-center align-items-center">
                         <label class="label col-7 col-lg-6" for="theme">ACTIVAR TEMA RETRO</label>
-                        <input type="checkbox" name="theme" id="retroTheme">                        
+                        <!--input type="checkbox" name="theme" id="retroTheme"-->
+                        <div class="custom-control custom-switch">
+                            <input type="checkbox" class="custom-control-input" id="retroTheme">
+                            <label class="custom-control-label" for="retroTheme"></label>
+                        </div>
+
                     </div>
                     <div class="row justify-content-center align-items-center">
                         <label class="label col-7 col-lg-6" for="theme">TEMA OSCURO</label>
-                        <input type="checkbox" name="theme" id="darkTheme">                        
+                        <div class="custom-control custom-switch">
+                            <input type="checkbox" class="custom-control-input" id="darkTheme">
+                            <label class="custom-control-label" for="darkTheme"></label>
+                        </div>
+                        <!--input type="checkbox" name="theme" id="darkTheme"-->
                     </div>
                 </div>
                 <div class="keypad d-flex flex-column align-items-center justify-content-center py-3">
@@ -61,7 +70,9 @@
                 </div>
             </div>
         </main>
-        <footer class="footer d-flex justify-content-center align-items-center bg-dark text-light col-12 col-sm-8 col-md-6 col-lg-4 p-2" id="footer">
+        <footer
+            class="footer d-flex justify-content-center align-items-center bg-dark text-light col-12 col-sm-8 col-md-6 col-lg-4 p-2"
+            id="footer">
             <span>Desarrollado por Harold Bartolo </span>
         </footer>
     </div>
