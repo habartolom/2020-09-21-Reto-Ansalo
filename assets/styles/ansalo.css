@@ -1,4 +1,10 @@
 
+.footer{
+    position: fixed;
+    bottom: 0;
+    height: 50px;
+}
+
 .key{
     width: 65px;
 }
